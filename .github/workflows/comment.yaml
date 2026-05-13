@@ -1,0 +1,65 @@
+name: comment
+
+on:
+  issue_comment:
+    types:
+      - created
+
+permissions:
+  contents: write
+  issues: read
+
+jobs:
+  comment:
+    if: "github.event.issue.labels[0].name == 'discussion: How many CPU cores do you really need?'"
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Fetch author name
+        run: |
+          NAME=$(gh api /users/$LOGIN --jq '.name // .login')
+          echo "name<<EOF" >> "$GITHUB_OUTPUT"
+          echo "$NAME" >> "$GITHUB_OUTPUT"
+          echo "EOF" >> "$GITHUB_OUTPUT"
+        id: user
+        env:
+          GH_TOKEN: ${{ github.token }}
+          LOGIN: ${{ github.event.comment.user.login }}
+
+      - name: Append comment
+        run: |
+          FILE=2026-05-14-how-many-cpu-cores-do-you-really-need.md
+
+          grep -v '\[Leave a comment]' "$FILE" > "$FILE.tmp"
+
+          cat >> "$FILE.tmp" <<EOF
+          ### [$AUTHOR]($PROFILE) — [$CREATED_AT]($URL)
+          $BODY  
+
+          [reply]($URL)
+
+          ---
+          [Leave a comment]($ISSUE#comment-composer-heading)
+          EOF
+
+          mv "$FILE.tmp" "$FILE"
+        env:
+          AUTHOR: ${{ steps.user.outputs.name }}
+          PROFILE: ${{ github.event.comment.user.html_url }}
+          CREATED_AT: ${{ github.event.comment.created_at }}
+          URL: ${{ github.event.comment.html_url }}
+          BODY: ${{ github.event.comment.body }}
+          ISSUE: ${{ github.event.issue.html_url }}
+
+      - name: Push changes
+        run: |
+          git config user.name "$AUTHOR_NAME"
+          git config user.email "$AUTHOR_EMAIL"
+          git add 2026-05-14-how-many-cpu-cores-do-you-really-need.md
+          git commit -m "Comment on 2026-05-14-how-many-cpu-cores-do-you-really-need.md"
+          git push
+        env:
+          AUTHOR_NAME: ${{ steps.user.outputs.name }}
+          AUTHOR_EMAIL: "${{ github.event.issue.user.login }}@users.noreply.github.com"
