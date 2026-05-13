@@ -73,7 +73,7 @@ With pinning, the results seem to be less noisy, but differences and benefits ar
 ## Conclusion
 So what is the best CPU for Haskell development?
 
-The benchmark results suggest that for many Haskell development workloads, six strong performance cores are more beneficial than a very high total core count.
+The benchmark results suggest that for Haskell development, six strong performance cores are more beneficial than a large number of total cores.
 
 We are looking for something with:
 
