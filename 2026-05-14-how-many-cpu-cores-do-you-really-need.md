@@ -91,7 +91,7 @@ Last month Intel dropped the ***Intel Core Ultra 7 270K Plus***.  It's basically
 
 It has:
 - 8 performance cores
-- the highest single core performance of any x86-64 CPU (according to synthetic benchmarks, alongside the 285K)
+- the highest single core performance of any x86-64 CPU (according to [synthetic benchmarks](https://www.cpubenchmark.net/singleThread.html), alongside the 285K)
 
 If you don't need mobility then this should make a very capable machine for Haskell development.
 
@@ -108,7 +108,7 @@ In a thermally constrained environment we're looking at:
 - Intel 265 (non-K)
 - AMD 9700X
 
-Both are 65W TDP, come with 8 full (performance) cores and comparable single core performance.
+Both are 65W TDP, come with 8 full (performance) cores and [comparable single core performance](https://www.cpubenchmark.net/compare/6205vs6423/AMD-Ryzen-7-9700X-vs-Intel-Ultra-7-265).
 
 Everything else equal, I'll go with AMD (likely better thermals, platform longevity).
 
