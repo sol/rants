@@ -22,12 +22,12 @@ I looked at two things:
 - Building GHC with `--flavour=quickest`
 - Installing all required dependencies for `hedgehog-1.7` with `cabal`
 
-(all results in seconds, lower is better)
-
 | JOBS  | 1   | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |10 |
 | ----- | --- |---|---|---|---|---|---|---|---|---|
 | [GHC][ghc] | 1460|820|645|566|536|525|524|526|531|534|
 | [CABAL][cabal] | 91  | 51| 36| 30| 27| 27| 27| 28| 29| 29|
+
+(all results in seconds, lower is better)
 
 For GHC builds we get consistent speedups up to ~6 cores, but not much beyond that.
 
