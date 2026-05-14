@@ -33,7 +33,7 @@ For GHC builds we get consistent speedups up to ~6 cores, but not much beyond th
 
 When installing dependencies for `hedgehog-1.7`, `cabal` can effectively utilize up to 5 cores.
 
-**NOTE:** For GHC builds we are hitting a hard limit here.  For `cabal`, however, this is highly workload dependent.  See the [final remarks](#final-remarks) for an explanation why.
+(Note that for GHC builds we are hitting a hard limit here.  For `cabal`, however, this is highly workload dependent.  See the [final remarks](#final-remarks) for an explanation why this is.)
 
 ## The impact of hyperthreading
 | JOBS  | 11 |12 |13 |14 |15 |16 |17 |18 |19 |20 |
