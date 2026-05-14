@@ -14,7 +14,7 @@ To make things reproducible, I wrote a small benchmarking tool called [`ghc-benc
 My goal with this is to collect comparable results for different CPUs over time.
 
 - **Benchmarking system:** Intel Core i9-10900K (10 cores / 20 threads), 32 GB RAM
-- All results in seconds, lower is better
+- All results in seconds (lower is better)
 
 ## Impact of `--jobs` on compilation times
 
