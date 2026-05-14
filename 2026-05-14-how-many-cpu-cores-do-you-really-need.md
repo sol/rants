@@ -15,14 +15,14 @@ My goal with this is to collect comparable results for different CPUs over time.
 
 **Benchmarking system:** Intel Core i9-10900K (10 cores / 20 threads), 32 GB RAM
 
-(all results in seconds, lower is better)
-
 ## Impact of `--jobs` on compilation times
 
 I looked at two things:
 
 - Building GHC with `--flavour=quickest`
 - Installing all required dependencies for `hedgehog-1.7` with `cabal`
+
+(all results in seconds, lower is better)
 
 | JOBS  | 1   | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |10 |
 | ----- | --- |---|---|---|---|---|---|---|---|---|
