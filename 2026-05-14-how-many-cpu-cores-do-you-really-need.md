@@ -10,7 +10,7 @@ Going into this, I had some long held *assumptions*:
 
 Basing decisions on assumptions never felt quite right. So I tried to get some numbers.
 
-To make these experiments reproducible, I wrote a small benchmarking tool called [`ghc-bench`][ghc-bench].
+To make things reproducible, I wrote a small benchmarking tool called [`ghc-bench`][ghc-bench].
 My goal with this is to collect comparable results for different CPUs over time.
 
 **Benchmarking system:** Intel Core i9-10900K (10 cores / 20 threads), 32 GB RAM
