@@ -40,7 +40,7 @@ When installing dependencies for `hedgehog-1.7`, `cabal` can effectively utilize
 | [GHC][ghc]   | 527|530|532|532|534|535|537|537|540|539|
 | [CABAL][cabal] |  29| 29| 29| 29| 29| 29| 29| 29| 29| 29|
 
-Hyperthreading doesn't contribute much.  Given that we didn't see scaling beyond six cores, this makes perfect sense.  On the upside, at least performance didn't degrade massively with increasing concurrency.
+Hyperthreading doesn't contribute much.  Given that we didn't see scaling beyond ~6 cores, this makes perfect sense.  On the upside, at least performance didn't degrade massively with increasing concurrency.
 
 **NOTE:** The same is likely true for efficiency cores ([numbers](https://github.com/sol/ghc-bench/issues/63#issuecomment-4346047909)).
 
