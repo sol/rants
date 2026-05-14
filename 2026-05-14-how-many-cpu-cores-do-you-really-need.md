@@ -54,7 +54,7 @@ As such, I looked into whether building GHC with different build flavors changes
 | [devel2][devel2]  |752|752|767|
 | [release][release] | 1942| 1917| 1918|
 
-Numbers for `devel2` line up with what we saw for `quickest`.
+`devel2` lines up with what we saw for `quickest`.
 
 A default (release) build benefits somewhat from two additional cores.
 
