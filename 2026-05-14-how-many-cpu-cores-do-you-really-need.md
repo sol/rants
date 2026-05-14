@@ -13,7 +13,8 @@ Basing decisions on assumptions never felt quite right. So I tried to get some n
 To make things reproducible, I wrote a small benchmarking tool called [`ghc-bench`][ghc-bench].
 My goal with this is to collect comparable results for different CPUs over time.
 
-**Benchmarking system:** Intel Core i9-10900K (10 cores / 20 threads), 32 GB RAM
+- **Benchmarking system:** Intel Core i9-10900K (10 cores / 20 threads), 32 GB RAM
+- All results in seconds, lower is better
 
 ## Impact of `--jobs` on compilation times
 
@@ -26,8 +27,6 @@ I looked at two things:
 | ----- | --- |---|---|---|---|---|---|---|---|---|
 | [GHC][ghc] | 1460|820|645|566|536|525|524|526|531|534|
 | [CABAL][cabal] | 91  | 51| 36| 30| 27| 27| 27| 28| 29| 29|
-
-(all results in seconds, lower is better)
 
 For GHC builds we get consistent speedups up to ~6 cores, but not much beyond that.
 
