@@ -99,7 +99,7 @@ If you don't need mobility then this should make a very capable machine for Hask
 > If I don't have any better sources, I look at GeekBench and PassMark results to gauge the single core performance of a CPU.
 > These are synthetic benchmarks, and synthetic benchmarks do not necessarily reflect real world performance for a specific workload.
 >
-> it's very much possible that for Haskell development the ***270K*** does not offer any noticeable advantage over the ***9700X*** (see next section).  This is the whole point I'm trying to make with [`ghc-bench`][ghc-bench]: We should base purchasing decisions on real world performance data, not synthetic benchmarks.
+> It's very much possible that for Haskell development the ***270K*** does not offer any noticeable advantage over the ***9700X*** (see next section).  This is the whole point I'm trying to make with [`ghc-bench`][ghc-bench]: We should base purchasing decisions on real world performance data, not synthetic benchmarks.
 
 ### AMD 9700X for a SFF build
 
